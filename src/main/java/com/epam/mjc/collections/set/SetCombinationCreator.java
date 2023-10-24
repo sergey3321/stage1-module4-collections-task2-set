@@ -9,6 +9,7 @@ public class SetCombinationCreator {
 
     public Set<String> createSetCombination(Set<String> firstSet, Set<String> secondSet, Set<String> thirdSet) {
 
+        intersection = new HashSet<>(firstSet);
         intersection.retainAll(secondSet);
         intersection.removeAll(thirdSet);
         resultSet.addAll(intersection);
